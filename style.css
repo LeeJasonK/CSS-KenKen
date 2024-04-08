@@ -1,7 +1,63 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* includes padding and border */
 }
 
 html {
   font-size: 10px;
+  /* not a good practice*/
+}
+
+/*CSS resets */
+body {
+  width: 100%750px;
+  margin: 0;
+  background-color: orange;
+}
+
+.grid {
+  height: 600px;
+  display: grid;
+  border: 1rem solid black;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.grid-items {
+  border: .1rem solid black;
+  font-size: 2rem;
+  background-color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box3, #box7, #box10, #box11, #box12, #box15 {
+  border-left: .5rem solid black;
+}
+
+#box1, #box2, #box3, #box4, #box5, #box8, #box9, #box10, #box11 {
+  border-bottom: .5rem solid black
+}
+
+.prompt {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.answer {
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+
+.special {
+  border: none;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 475px) {
+ html {
+  font-size: 16px;
+ }
 }
